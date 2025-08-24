@@ -261,3 +261,7 @@ I printed Descriptive Statistics: If bot_users was not empty, it printed descrip
 I visualized the Distributions: I created a figure with two subplots to visualize the distributions of 'total_events' and 'avg_time_diff' for the bot users using histograms (sns.histplot).
 1.	Distribution of Total Events for Bots: The first histogram shows the distribution of the total number of events for each flagged bot. A log scale was used for the y-axis (plt.yscale('log')) because there might be a wide range of total events, with some bots having a significantly higher number than others.
 2.	Distribution of Average Time Difference for Bots: The second histogram showed the distribution of the average time difference between events for the flagged bots. Again, a log scale was used for the y-axis for similar reasons.
+
+Exported necessary files for app development
+
+The trained model and the vectorizer were saved: The trained RandomForestClassifier model was finally saved to a file named random_forest_model.pkl using joblib. The fitted CountVectorizer was also saved to a file named count_vectorizer.pkl. 
