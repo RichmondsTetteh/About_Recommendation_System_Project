@@ -253,3 +253,11 @@ Finally, the trained model and the vectorizer were saved:
 The trained RandomForestClassifier model was initially saved to a file named random_forest_model.joblib using joblib.
 The fitted CountVectorizer was also saved to a file named count_vectorizer.joblib. This is important because I would need to use the same vectorizer to transform new data before making predictions with the saved model. Messages were printed to confirm the saving of the model and vectorizer files.
 
+I quantified and visualized the impact of removing the flagged bot users on key metrics and analyze the characteristics of the identified bots.
+
+I analyzed the characteristics of flagged bots. I focused on the distribution of total events and average time difference specifically for the flagged bot users.
+I checked if bot_users DataFrame is empty: It first checked if the bot_users DataFrame (which contains the statistics for users flagged as bots) is not empty. If it was empty, it printed a message indicating that bot users were not found and the analysis cannot proceed.
+I printed Descriptive Statistics: If bot_users was not empty, it printed descriptive statistics (.describe()) for the 'total_events' and 'avg_time_diff' columns of the bot_users DataFrame. This gave a summary of the event counts and time differences for the flagged bots (e.g., mean, standard deviation, min, max, quartiles).
+I visualized the Distributions: I created a figure with two subplots to visualize the distributions of 'total_events' and 'avg_time_diff' for the bot users using histograms (sns.histplot).
+1.	Distribution of Total Events for Bots: The first histogram shows the distribution of the total number of events for each flagged bot. A log scale was used for the y-axis (plt.yscale('log')) because there might be a wide range of total events, with some bots having a significantly higher number than others.
+2.	Distribution of Average Time Difference for Bots: The second histogram showed the distribution of the average time difference between events for the flagged bots. Again, a log scale was used for the y-axis for similar reasons.
