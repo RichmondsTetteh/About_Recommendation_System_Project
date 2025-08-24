@@ -9,3 +9,8 @@ The trained model and the vectorizer were saved: The trained RandomForestClassif
 - `count_vectorizer.pkl`
 
 These files will be used for making item predictions.
+
+**App Name: Item Category Prediction**
+
+The app predicts the category of an item a user is likely to add to their cart based on viewed categories. For example, selecting 'electronics' and 'phones' predicts the most likely add-to-cart category.
+The app then displays the top 3 items to be added to the cart while displaying their probabilities.
